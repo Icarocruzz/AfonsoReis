@@ -1,7 +1,7 @@
 .main {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 1200px;
   margin: auto;
   z-index: -2;
 }
@@ -29,3 +29,5 @@
   font-size: 1.2rem;
   font-weight: normal;
 }
+
+
