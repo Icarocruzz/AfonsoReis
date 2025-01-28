@@ -5,7 +5,7 @@ import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, ArtService],
+  imports: [CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
