@@ -1,0 +1,16 @@
+
+section {
+  box-sizing: border-box;
+  background-color: black;
+}
+
+.tittle {
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.art-card img {
+  margin: 2rem;
+  width: 260px;
+}

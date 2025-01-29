@@ -1,17 +1,29 @@
-header {
-  padding: 10px;
-  background: #333;
-
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  padding: 10px 0;
 }
 
 .container {
-  margin-left: 1rem;
-  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-  width: 90px;
-  left: 0;
+  width: 70px;
 }
 
 .logo:hover {
@@ -33,11 +45,10 @@ header {
   display: inline-block;
   font-size: 18px;
   margin-left: 26px;
+  justify-content: end;
 }
 
 .desktop_menu ul li:hover {
-  font-size: 19px;
-  font-weight: bold;
   cursor: pointer;
   color: deepskyblue;
   transition: 0.2s ease-in-out;
@@ -48,22 +59,39 @@ header {
 }
 
 @media screen and (min-width: 120px) and (max-width: 900px) {
+
+  nav {
+    background: #333;
+    z-index: 1000;
+    padding: 10px 15px;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
   .desktop_menu {
     position: fixed;
     transition: 0.4s ease-in-out;
-    right: -280px;
-    top: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80px;
     background: #333;
-    width: 280px;
-    height: 100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
   }
 
   .desktop_menu ul li{
     display: block;
-    text-align: left;
+    text-align: center;
+    font-size: 2rem;
     margin: 0;
-    padding: 10px 0 10px 26px;
-    border-bottom: 1px solid white;
+    padding: 10px;
+    z-index: 0;
   }
 
   .menu-icon {
@@ -71,10 +99,12 @@ header {
     color: #fff;
     font-size: 40px;
     padding-top: 10px;
+    position: relative;
+    z-index: 1100;
   }
   .mobile_menu {
-    right: 0;
-    transition: 0.4s ease-in-out;
+    opacity: 1;
+    pointer-events: auto;
   }
 
 }
