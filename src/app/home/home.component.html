@@ -3,10 +3,18 @@
     <h1>Ilustrations</h1>
   </div>
 
-  <div *ngFor="let art of arts" class="art-card" >
-    <img [src]="art.imageUrl" [alt]="art.tittle">
-    <img [src]="art.imageUrl" [alt]="art.tittle">
-    <img [src]="art.imageUrl" [alt]="art.tittle">
+  
+
+  <div *ngFor="let art of arts" class="art-card">
+    <img [src]="art.imageUrl" [alt]="art.tittle" class="thumb" (click)="openLightBox(art)">
+  </div>
+
+  <div *ngIf="lightboxOpen" class="lightbox" (click)="closeLightbox()">
+    <div class="lightbox-content">
+      <img [src]="selectArt?.imageUrl" [alt]="selectArt?.tittle">
+      <h2>{{ selectArt?.tittle }}</h2>
+      <p>{{ selectArt?.description }}</p>
+    </div>
   </div>
 
 </section>

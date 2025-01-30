@@ -11,10 +11,24 @@ import {CommonModule} from '@angular/common';
 })
 export class HomeComponent {
   arts: Art[] = [];
+  selectArt: Art | null = null;
+  lightboxOpen: boolean = false;
+
+
   constructor(private artService: ArtService) { }
 
   ngOnInit(): void {
     this.arts = this.artService.getArts()
   }
+
+  openLightBox(art: Art) {
+    this.selectArt = art;
+    this.lightboxOpen = true;
+  }
+
+  closeLightbox(): void {
+    this.lightboxOpen = false;
+  }
+
 
 }

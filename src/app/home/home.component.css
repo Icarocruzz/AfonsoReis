@@ -1,7 +1,10 @@
-
 section {
   box-sizing: border-box;
   background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
 }
 
 .tittle {
@@ -10,7 +13,50 @@ section {
   padding: 2rem;
 }
 
-.art-card img {
-  margin: 2rem;
-  width: 260px;
+.art-card {
+  display: flex;
+  gap: 10px;
+}
+
+.thumb {
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.thumb:hover {
+  transform: scale(1.1);
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.lightbox h2 {
+  color: #333;
+  margin-top: 10px;
+}
+
+.lightbox p {
+  color: #666;
 }
