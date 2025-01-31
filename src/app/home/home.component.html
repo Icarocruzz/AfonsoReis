@@ -1,9 +1,8 @@
+
 <section>
   <div class="tittle">
     <h1>Ilustrations</h1>
   </div>
-
-  
 
   <div *ngFor="let art of arts" class="art-card">
     <img [src]="art.imageUrl" [alt]="art.tittle" class="thumb" (click)="openLightBox(art)">
