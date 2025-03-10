@@ -1,0 +1,35 @@
+section {
+  background: var(--white);
+  font-family: var(--main-font), sans-serif;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 30px;
+}
+
+.title h1 {
+  font-size: 50px;
+  color: var(--primary-color);
+}
+
+.text {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.socials i:hover {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+

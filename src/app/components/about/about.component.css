@@ -1,0 +1,50 @@
+section {
+
+  display: flex;
+  flex-direction: row;
+  background: black;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--main-font), sans-serif;
+}
+
+.profile-container {
+  padding: 50px;
+  width: 100%;
+}
+
+.profile-container img {
+  border-radius: 50%;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.title {
+  color: var(--secondary-color);
+}
+
+.title h1 {
+  font-size: 3rem;
+}
+
+.title p {
+  font-size: 1.5rem;
+}
+
+.text {
+  color: var(--white);
+  text-align: center;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+@media screen and (min-width: 128px) and (max-width: 1200px) {
+  .text {
+    margin: 10px;
+  }
+}
