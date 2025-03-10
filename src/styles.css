@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+:root {
+  --main-font:"Poppins", sans-serif;
+  --primary-color:#101014;
+  --primary-color-light: #202024;
+  --secondary-color: #f9b93b;
+  --white: #eeeef1;
+}
