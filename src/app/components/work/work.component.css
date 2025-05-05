@@ -2,6 +2,7 @@ section {
   display: flex;
   flex-direction: column;
   background: black;
+  padding: 50px;
 }
 
 
