@@ -1,13 +1,13 @@
-<section id="ilustration">
+<section>
   <div class="title">
-    <h1>Ilustrations</h1>
+    <h1>Sketchs</h1>
   </div>
 
   <div class="gallery-container">
-      <div class="gallery">
-        <img *ngFor="let img of images" src="{{img}}" alt="ilustração"(click)="openImage(img)">
-      </div>
+    <div class="gallery">
+      <img *ngFor="let img of images" src="{{img}}" alt="ilustração"(click)="openImage(img)">
     </div>
+  </div>
 
   <div class="modal" *ngIf="selectedImage" (click)="closeImage()">
     <img [src]="selectedImage" alt="ilustração ampliada" class="modal-img" />
