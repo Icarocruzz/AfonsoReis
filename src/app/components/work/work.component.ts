@@ -12,48 +12,28 @@ import {SlickCarouselModule} from 'ngx-slick-carousel';
   styleUrl: './work.component.css'
 })
 export class WorkComponent {
+  images = [
+    '/druid.jpg',
+    '/egg.jpg',
+    '/potion.jpg',
+    '/druid.jpg',
+    '/egg.jpg',
+    '/potion.jpg',
+    '/druid.jpg',
+    '/egg.jpg',
+    '/potion.jpg',
+    '/druid.jpg'
+  ];
 
-  slides =[
-    {img: "/druid.jpg"},
-    {img: "/egg.jpg"},
-    {img: "/potion.jpg"},
-    {img: "/shaman.jpg"},
-    {img: "/potion.jpg"},
-    {img: "/egg.jpg"},
-    {img: "/druid.jpg"},
-    {img: "/shaman.jpg"},
-    {img: "/potion.jpg"},
-    {img: "/egg.jpg"},
-  ]
+  selectedImage: string | null = null;
 
-  slideConfig = {
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: false,
-    infinite: true,
-    arrows: true,
-    dots: false,
-    responsive: [
-      {
-        breakpoint: 128,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          arrows: true,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 900,
-        settings: {
-          arrows: true,
-          infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  };
+  openImage(img: string) {
+    this.selectedImage = img;
+  }
+
+  closeImage() {
+    this.selectedImage = null;
+  }
+
+
 }

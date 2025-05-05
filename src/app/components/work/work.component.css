@@ -4,9 +4,6 @@ section {
   background: black;
 }
 
-.slick-prev:before, .slick-next:before {
-  color: white;
-}
 
 .title {
   text-align: center;
@@ -22,21 +19,50 @@ section {
 .carousel-container {
   padding: 50px;
 }
-
-.slide {
-  height: 250px;
-  width: 250px;
-  transition: all 0.5s ease;
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  gap: 5px;
 }
 
-.slide img {
-  padding: 10px;
+.gallery img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  cursor: zoom-out;
+}
+
+.modal img {
+  max-width: 90vh;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 @media (max-width: 900px) {
+
+
 
 }
 

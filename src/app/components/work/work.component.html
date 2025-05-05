@@ -4,12 +4,13 @@
   </div>
 
   <div class="carousel-container">
-    <ngx-slick-carousel class="carousel" #slickModel="slick-carousel" [config]="slideConfig">
-      <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-        <img src="{{slide.img}}" alt="pinturas digitais do Afonso Reis" class="slide">
-
+      <div class="gallery">
+        <img *ngFor="let img of images" src="{{img}}" alt="ilustração"(click)="openImage(img)">
       </div>
-    </ngx-slick-carousel>
+    </div>
+
+  <div class="modal" *ngIf="selectedImage" (click)="closeImage()">
+    <img [src]="selectedImage" alt="ilustração ampliada" class="modal-img" />
   </div>
 
 </section>
